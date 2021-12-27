@@ -84,7 +84,7 @@ app.delete('/goals/:id', async (req, res) => {
 });
 
 mongoose.connect(
-  "mongodb+srv://kais:Ysp5E8QE4t1z7TPN@cluster0.lsly3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  `mongodb+srv://${process.env.MongoAtlas_USERNAME}:${process.env.MongoAtlas_PASSWORD}@cluster0.lsly3.mongodb.net/GOALS_Database?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
